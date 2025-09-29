@@ -8,8 +8,8 @@ token:
     with-user: developerNSteuerberg
     expired-minutes: 15
     rsa:
-      private-key: classpath:keys/private.pem
-      public-key: classpath:keys/public.pem
+      private-key: ${JWT_PRIVATE_KEY}
+      public-key: ${JWT_PUBLIC_KEY}
 
 spring:
   jpa:
