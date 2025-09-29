@@ -1,0 +1,39 @@
+server:
+  port: 8081
+
+token:
+  refresh:
+    expired-days: 30
+  jwt:
+    with-user: developerNSteuerberg
+    expired-minutes: 15
+    rsa:
+      private-key: classpath:keys/private.pem
+      public-key: classpath:keys/public.pem
+
+spring:
+  jpa:
+    show-sql: true
+    generate-dll: false
+    database: POSTGRESQL
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${AUTH_DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  data:
+    mongodb:
+      host: ${MONGO_HOST}
+      port: ${MONGO_PORT}
+      database: ${MONGO_DB}
+      auto-index-creation: true
+
+eureka:
+  instance:
+    hostname: ${EUREKA_HOST}
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL}
