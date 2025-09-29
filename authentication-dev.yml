@@ -8,8 +8,8 @@ token:
     with-user: developerNSteuerberg
     expired-minutes: 15
     rsa:
-      private-key: ${JWT_PRIVATE_KEY}
-      public-key: ${JWT_PUBLIC_KEY}
+      private-key: file:${JWT_PRIVATE_KEY}
+      public-key: file:${JWT_PUBLIC_KEY}
 
 spring:
   jpa:
