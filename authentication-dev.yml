@@ -24,9 +24,6 @@ spring:
     url: jdbc:postgresql://${AUTH_DB_URL}
     username: ${DB_USER}
     password: ${DB_PASSWORD}
-  sql:
-    init:
-      mode: always
   data:
     mongodb:
       host: ${MONGO_HOST}
